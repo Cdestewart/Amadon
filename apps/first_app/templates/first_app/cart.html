@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title>Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: linear-gradient(320deg, #bcded8, #7fafae 37%);
+            width: 770px;
+            height: 700px;
+            margin: 100px;
+        }
+
+        #container {
+            min-width: 900px;
+            min-height: 450px;
+            border-radius: 15px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            background: linear-gradient(-180deg, white, ghostwhite);
+            opacity: .9;
+            margin-top: 10px;
+            box-shadow: -1px -3px 27px 5px rgb(189, 189, 189) inset;
+        }
+
+        #add {
+            min-width: 900px;
+            height: 250px;
+            text-align: center;
+            border-radius: 15px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            background: linear-gradient(-180deg, white, ghostwhite);
+            opacity: .9;
+
+            box-shadow: -1px -3px 27px 5px rgb(189, 189, 189) inset;
+        }
+
+        #header {
+            border-radius: 10px;
+            height: 50px;
+            width: 300px;
+            box-shadow: -1px -3px 21px -5px rgb(189, 189, 189) inset;
+            border: 3px solid lavender;
+            background: linear-gradient(-180deg, white, ghostwhite);
+        }
+
+        h2 {
+            margin: auto;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+
+        button {
+            border-radius: 8px;
+            background: linear-gradient(-180deg, silver, #c6cfd9);
+        }
+
+        table {
+            margin: auto;
+            min-width: 700px;
+            min-height: 300px;
+            margin-bottom: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        form {
+            margin-left: 328px;
+        }
+
+        th {
+            background: linear-gradient( whitesmoke 5%, #f4f0f0);
+            padding: 10px;
+        }
+
+        button {
+            text-align: center;
+            margin-left: 75px;
+            margin-top: 10px;
+            padding: 3px 5px 3px 5px;
+            color: white;
+        }
+
+        textarea {
+            width: 250px;
+            height: 90px;
+            padding: 5px;
+            border-radius: 8px;
+
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        td {
+            background-color: #f4f0f0;
+            padding: 5px;
+        }
+
+        a {
+            margin-left: 662px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='container'>
+
+        <h1>Thank you for your business!</h1>
+        <h4>We charged your credit car for {{last}}</h4>
+        <h2>Your Purchases:</h2>
+        <h4>You have ordered {{count}} items so far and spent {{total}} with Amadon.com!</h4>
+        <a href="/amadon">Go back</a>
+    </div>
+
+</body>
+
+</html>

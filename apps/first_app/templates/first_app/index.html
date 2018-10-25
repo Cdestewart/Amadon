@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <title>Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: linear-gradient(320deg, #bcded8, #7fafae 37%);
+            width: 970px;
+            height: 900px;
+            margin: 100px;
+        }
+
+        #container {
+            min-width: 900px;
+            min-height: 450px;
+            border-radius: 15px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            background: linear-gradient(-180deg, white, ghostwhite);
+            opacity: .9;
+            margin-top: 10px;
+            box-shadow: -1px -3px 27px 5px rgb(189, 189, 189) inset;
+        }
+
+        #add {
+            min-width: 900px;
+            height: 250px;
+            text-align: center;
+            border-radius: 15px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            background: linear-gradient(-180deg, white, ghostwhite);
+            opacity: .9;
+            box-shadow: -1px -3px 27px 5px rgb(189, 189, 189) inset;
+        }
+
+        #header {
+            border-radius: 10px;
+            height: 50px;
+            width: 300px;
+            box-shadow: -1px -3px 21px -5px rgb(189, 189, 189) inset;
+            border: 3px solid lavender;
+            background: linear-gradient(-180deg, white, ghostwhite);
+        }
+
+        h2 {
+            margin: auto;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        button {
+            margin-left: 10px;
+            border-radius: 8px;
+            background: linear-gradient(-180deg, silver, #c6cfd9);
+            color: white;
+        }
+
+        table {
+            margin: auto;
+            min-width: 700px;
+            min-height: 300px;
+            margin-bottom: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+
+        th {
+            background: linear-gradient( whitesmoke 5%, #f4f0f0);
+            padding: 10px;
+        }
+
+        textarea {
+            width: 250px;
+            height: 90px;
+            padding: 5px;
+            border-radius: 8px;
+
+        }
+
+        td {
+            background-color: #f4f0f0;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='container'>
+        <h2>Welcome to the store!</h2>
+
+        <table>
+
+
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr>
+                <td>Dojo Tshirt</td>
+                <td>$19.99</td>
+                <td>
+                    <form action='/amadon/buy' method='POST'>
+                        {% csrf_token %}
+                        <select name='quantity'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <input type='hidden' name='code' value='1001'>
+                        <button>Buy</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Dojo Sweater</td>
+                <td>$29.99</td>
+                <td>
+                    <form action='/amadon/buy' method='POST'>
+                        {% csrf_token %}
+                        <select name='quantity'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <input type='hidden' name='code' value='1402'>
+                        <button>Buy</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Dojo Cup</td>
+                <td>$4.99</td>
+                <td>
+                    <form action='/amadon/buy' method='POST'>
+                        {% csrf_token %}
+                        <select name='quantity'>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <input type='hidden' name='code' value='2102'>
+                        <button>Buy</button>
+                    </form>
+                </td>
+            </tr>
+            </form>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
